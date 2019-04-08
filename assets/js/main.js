@@ -1,6 +1,6 @@
 ---
 ---
-var {% include js/api.js %};
+var {% include /clan/js/api.js %};
 
 (function(){ // smooth scrolling pants
 
