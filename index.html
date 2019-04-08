@@ -118,8 +118,8 @@
     //load data for the images on the preselected group
 	req.url = "https://www.bungie.net/platform/GroupV2/" + $scope.selectedClan.ID + "/"; //Members/?currentpage=1&memberType=none";
 	$http(req).then(function (response) {
-		$scope.banner = response.data.Response.detail.bannerPath;
-		$scope.avatar = response.data.Response.detail.avatarPath;
+		$scope.banner = response.data.Response.bannerPath;
+		$scope.avatar = response.data.Response.avatarPath;
 	});
 	
 	//load inital data for the grid based on the preselected group
