@@ -1,4 +1,4 @@
-baseurl: ""
+baseurl: "/clan/"
 repository: redous-uk.github.io/clan/
 exclude: ['README.md']
 permalink: pretty
