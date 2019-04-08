@@ -39,7 +39,7 @@
 		//debugger
 			req.url = "https://www.bungie.net/platform/GroupV2/" + $scope.selectedClan.ID + "/Members/?currentpage=1&memberType=none";
 			$http(req).then(function (response) {
-				return response.data.Response.results;
+				return response.data.Response;
 			});
 		};
 		
