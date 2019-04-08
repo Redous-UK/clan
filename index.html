@@ -26,8 +26,8 @@
 		<!-- <p>{{ selectedClan.ID }}</p> -->
 		<!-- <p><strong>Grid with native pagination controls</strong></p> -->
 		<div>
-			<div><img style="position:fixed; width:500px;" ng-src="http://www.bungie.net/{{banner}}" /></div>
-			<div><img style="position:relative; height:94px;" ng-src="http://www.bungie.net/{{avatar}}" /></div>
+			<div><img style="position:fixed; width:500px;" ng-src="http://www.bungie.net{{banner}}" /></div>
+			<div><img style="position:relative; height:94px;" ng-src="http://www.bungie.net{{avatar}}" /></div>
 		</div>
 		<div ui-grid="gridOptions1" ui-grid-exporter class="grid"></div>
 	</div>
@@ -39,7 +39,7 @@
 		//debugger
 			req.url = "https://www.bungie.net/platform/GroupV2/" + $scope.selectedClan.ID + "/Members/?currentpage=1&memberType=none";
 			$http(req).then(function (response) {
-				return response.data.Response;
+				return response.data.Response.results;
 			});
 		};
 		
@@ -105,7 +105,7 @@
 		 method: "GET",
 		 url: '',
 		 headers: {
-			'X-API-Key':'beb58c9bfa51490b9d20545605ebb699'
+			'X-API-Key':'{your api key here}'
 		}
 	};
 	
@@ -118,8 +118,8 @@
     //load data for the images on the preselected group
 	req.url = "https://www.bungie.net/platform/GroupV2/" + $scope.selectedClan.ID + "/"; //Members/?currentpage=1&memberType=none";
 	$http(req).then(function (response) {
-		$scope.banner = response.data.Response.bannerPath;
-		$scope.avatar = response.data.Response.avatarPath;
+		$scope.banner = response.data.Response.detail.bannerPath;
+		$scope.avatar = response.data.Response.detail.avatarPath;
 	});
 	
 	//load inital data for the grid based on the preselected group
