@@ -3,7 +3,7 @@
 $(function() {
 
   var
-    {% include js/ranks.js %},
+    {% include /clan/js/ranks.js %},
     bungieId = checkParams('bungieId'),
     exalted = checkParams('exalted'),
     destinyId = checkParams('destinyId'),
