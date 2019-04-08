@@ -13,7 +13,7 @@ var {% include /clan/js/api.js %};
     // On-page links
     if (
       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
-      location.hostname == this.hostname
+      location.hostname == this.hostname && '/clan/'
     ) {
       // Figure out element to scroll to
       var target = $(this.hash);
