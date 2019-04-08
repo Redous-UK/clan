@@ -12,30 +12,30 @@
     <meta name="og:description" content="{{page.meta}}">
     {% endif %}
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="{{"/clan/assets/css/kokkaku.css?v=" | append: site.github.build_revision | relative_url }}">
-    <link rel="stylesheet" href="/clan/assets/css/style.css">
+    <link rel="stylesheet" href="{{"/assets/css/kokkaku.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="/assets/css/style.css">
     {% if page.style %}
       {% for file in page.style %}
-      <link rel="stylesheet" href="/clan/assets/css/{{file}}">
+      <link rel="stylesheet" href="/assets/css/{{file}}">
       {% endfor %}
     {% endif %}
-    <link rel="icon" href="/clan/assets/img/favicon.ico" type="image/x-icon" />
-		<link rel="apple-touch-icon" href="/clan/assets/img/roi-icon-120px.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="/clan/assets/img/roi-icon-152px.png">
-		<link rel="apple-touch-icon" sizes="167x167" href="/clan/assets/img/roi-icon-167px.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="/clan/assets/img/roi-icon-180px.png">
+    <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon" href="/assets/img/roi-icon-120px.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/roi-icon-152px.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="/assets/img/roi-icon-167px.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/roi-icon-180px.png">
     <title>{% if page.title %}{{page.title}} - {% endif %}Exalted</title>
   </head>
   <body{% if page.bodyclass %} class="{{page.bodyclass}}"{% endif %}>
-    {% include /clan/html/nav.html %}
+    {% include html/nav.html %}
     {{content}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="/clan/assets/js/main.js"></script>
+    <script src="/assets/js/main.js"></script>
     {% if page.js %}
       {% for file in page.js %}
-      <script type="text/javascript" src="/clan/assets/js/{{file}}"></script>
+      <script type="text/javascript" src="/assets/js/{{file}}"></script>
       {% endfor %}
     {% endif %}
-    {% include clan/html/footer.html %}
+    {% include html/footer.html %}
   </body>
 </html>
