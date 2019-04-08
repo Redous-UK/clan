@@ -3,6 +3,6 @@ repository: redous-uk.github.io/clan/
 exclude: ['README.md']
 permalink: pretty
 sass:
-    sass_dir: ./assets/css
+    sass_dir: ./clan/assets/css
 plugins:
   - jekyll-redirect-from
